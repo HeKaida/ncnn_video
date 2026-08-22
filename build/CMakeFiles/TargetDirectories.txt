@@ -1,0 +1,3 @@
+/home/hkd/Desktop/ncnn_video/build/CMakeFiles/ncnn_video.dir
+/home/hkd/Desktop/ncnn_video/build/CMakeFiles/edit_cache.dir
+/home/hkd/Desktop/ncnn_video/build/CMakeFiles/rebuild_cache.dir
