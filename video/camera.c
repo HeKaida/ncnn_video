@@ -60,7 +60,7 @@ static void *capture_thread(void *arg)
 	
 	PT_Manager ptManager = (PT_Manager)arg;
 
-	while(1)
+	while(!ptManager->g_stop)
 	{
 		iError = ptManager->tVideoDevice.ptOpr->GetFrame(&ptManager->tVideoDevice);
 		if(iError < 0)
@@ -105,11 +105,13 @@ static void *capture_thread(void *arg)
 		
 	}
 
+	return NULL;
+	
 err_exit:
 
+	ptManager->g_stop = 1;
+	
 	pthread_exit(&g_thread);	
-
-	return NULL;
 }
 
 

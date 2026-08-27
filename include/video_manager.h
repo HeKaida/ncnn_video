@@ -2,6 +2,9 @@
 #define _VIDOE_MANAGER_H
 
 
+#include <aio.h>
+
+
 /*
 	set requst buffers count
 */

@@ -123,9 +123,9 @@ static int V4L2InitDevice(char *strDevName, PT_VideoDevice ptVideoDevice)
 			frmsize_index++;
 		}
 
-		if(ptVideoDevice->iPixelFormat & v4l2_fmt_desc.pixelformat)
+		if(ptVideoDevice->iPixelFormat == v4l2_fmt_desc.pixelformat)
 		{
-			DBG_PRINTF("---support pixelformat: %d ---", ptVideoDevice->iPixelFormat);
+			DBG_PRINTF("---support pixelformat: %s ---\n", v4l2_fmt_desc.description);
 		}
 		
 		fmt_desc_index++;

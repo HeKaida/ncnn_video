@@ -9,7 +9,7 @@
 #include "convert_manager.h"
 #include "main.h"
 
-static pthread_t gthread;
+static pthread_t g_thread;
 
 int Yolo11_init(const char *param, const char *bin, int target_sz)
 {
@@ -34,12 +34,12 @@ static void *Consumer_thread(void *arg)
 
 	PT_Manager ptManager = (PT_Manager)arg;
 	
-	while(1)
+	while(!ptManager->g_stop)
 	{
 		memset(&ptManager->tVideoConvert_Buf, 0, sizeof(T_VideoConvert_Buf));
 		
 		pthread_mutex_lock(&ptManager->frame_lock);
-		if(ptManager->tVideoDevice.tVideoBuf.status == 0)
+		while(ptManager->tVideoDevice.tVideoBuf.status == 0)
 		{
 			pthread_cond_wait(&ptManager->frame_cond, &ptManager->frame_lock);
 		}
@@ -50,7 +50,7 @@ static void *Consumer_thread(void *arg)
 		if(iError < 0)
 		{
 			DBG_SPRINTF(stderr, "ReleaseFrame fail!\n");
-			break;
+			goto ReleaseFrame_err_exit;
 		}
 		pthread_mutex_unlock(&ptManager->frame_lock);
 		
@@ -60,7 +60,7 @@ static void *Consumer_thread(void *arg)
 		if(iError != 0)
 		{
 			DBG_SPRINTF(stderr, "NCNNDetect fail!\n");
-			break;
+			goto ncnn_err_exit;
 		}
 
 		clock_gettime(CLOCK_MONOTONIC, &end);
@@ -74,11 +74,24 @@ static void *Consumer_thread(void *arg)
 		
 		pthread_mutex_lock(&ptManager->frame_lock);
 		ptManager->tVideoDevice.tVideoBuf.status = 0;
-		//ptManager->tVideoDevice.status = 0;
 		pthread_mutex_unlock(&ptManager->frame_lock);	
 	}
 
 	return NULL;
+	
+ncnn_err_exit:
+
+	pthread_mutex_lock(&ptManager->frame_lock);
+
+ReleaseFrame_err_exit:
+
+	ptManager->tVideoDevice.tVideoBuf.status = 0;
+	pthread_mutex_unlock(&ptManager->frame_lock);
+
+	free(ptManager->tVideoConvert_Buf.rgb_out);
+	ptManager->g_stop = 1;
+
+	pthread_exit(&g_thread);
 }
 
 
@@ -86,7 +99,7 @@ int Yolo11_Thread_Start(PT_Manager ptManager)
 {
 	int iError;
 	
-	iError = pthread_create(&gthread, NULL, Consumer_thread, (void *)ptManager);
+	iError = pthread_create(&g_thread, NULL, Consumer_thread, (void *)ptManager);
 	if(iError != 0)
 	{
 		return -1;
@@ -99,7 +112,7 @@ int Yolo11_Thread_Join(void)
 {
 	int iError;
 
-	iError = pthread_join(gthread, NULL);
+	iError = pthread_join(g_thread, NULL);
 	if(iError != 0)
 	{
 		return -1;

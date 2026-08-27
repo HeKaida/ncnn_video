@@ -60,6 +60,10 @@ CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o: \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio_lim.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio.h \
  /home/hkd/Desktop/ncnn_video/include/video_manager.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/aio.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/sigevent_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__sigval_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/sigevent-consts.h \
  /home/hkd/Desktop/ncnn_video/include/convert_manager.h \
  /home/hkd/Desktop/ncnn_video/include/video_manager.h \
  /home/hkd/Desktop/ncnn_video/libjpeg_arm_install/include/jpeglib.h \

@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+
 #include "camera.h"
 #include "yolo11.h"
 #include "main.h"
 
-T_Manager tManager;
 
+T_Manager tManager;
 
 
 int main(int argc, char **argv)
@@ -18,7 +19,7 @@ int main(int argc, char **argv)
 		return -1;
   	}
 
-
+	tManager.g_stop = 0;
 	
 	iError = Camera_Init(argv[1], &tManager);
 	if(iError != 0)
@@ -65,7 +66,6 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Yolo11_Thread_Start() fail!\n");
 		return -1;
 	}
-
 
 
 	iError = Camera_Thread_Join(&tManager);

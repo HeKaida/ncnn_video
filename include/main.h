@@ -10,6 +10,8 @@
 
 typedef struct Manager
 {
+	volatile int g_stop;
+	
 	pthread_mutex_t frame_lock;
 	pthread_cond_t frame_cond;
 
