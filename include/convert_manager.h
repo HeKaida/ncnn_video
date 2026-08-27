@@ -1,8 +1,9 @@
 #ifndef _CONVERT_MANAGER_H
 #define _CONVERT_MANAGER_H
 
-#include <stdio.h>
+
 #include "video_manager.h"
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -27,6 +28,7 @@ typedef struct VideoConvert_Opr
 	struct VideoConvert_Opr *ptNext;
 }T_VideoConvert_Opr, *PT_VideoConvert_Opr;
 
+
 typedef struct ConvertDevice
 {
 	PT_VideoConvert_Opr ptOpr;
@@ -38,6 +40,7 @@ void ShowConvertOpr(void);
 PT_VideoConvert_Opr GetConvertOpr(char *pcName);
 void ConvertDevicetInit(PT_ConvertDevice ptConvertDevice);
 int VideoConvertInit(void);
+
 
 #ifdef __cplusplus
 }

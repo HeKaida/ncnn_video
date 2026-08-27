@@ -76,7 +76,7 @@
 
 #include "layer.h"
 #include "net.h"
-#include "yolo11_int8.h"
+#include "ncnn.h"
 
 #include "simpleocv.h"
 
@@ -413,14 +413,14 @@ int Yolo11Detector::detect(const cv::Mat& bgr, std::vector<Object>& objects)
         objects[i].rect.y = y0;
         objects[i].rect.width = x1 - x0;
         objects[i].rect.height = y1 - y0;
-    }
-
+    }  
+	
     return 0;
 }
 
 void Yolo11Detector::draw_objects(const cv::Mat& bgr, const std::vector<Object>& objects)
 {
-	/*
+	
     static const char* class_names[] = {
 			"Coca_cola_Can_330ml",
 			"Fanta_Can_330ml",
@@ -456,18 +456,18 @@ void Yolo11Detector::draw_objects(const cv::Mat& bgr, const std::vector<Object>&
     };
 	
     cv::Mat image = bgr.clone();
-	*/
+	
 	
     for (size_t i = 0; i < objects.size(); i++)
     {
         const Object& obj = objects[i];
 
-        //const cv::Scalar& color = colors[i % 19];
+        const cv::Scalar& color = colors[i % 19];
 
         fprintf(stderr, "%d = %.5f at %.2f %.2f %.2f x %.2f\n", obj.label, obj.prob,
                 obj.rect.x, obj.rect.y, obj.rect.width, obj.rect.height);
 
-		/*
+		
         cv::rectangle(image, obj.rect, color);
 
         char text[256];
@@ -488,11 +488,12 @@ void Yolo11Detector::draw_objects(const cv::Mat& bgr, const std::vector<Object>&
 
         cv::putText(image, text, cv::Point(x, y + label_size.height),
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
-	*/
+    	
     }
+	
     //cv::imshow("image", image);
     //cv::waitKey(0);
-	//cv::imwrite("result.jpg", image);
-	//fprintf(stderr, "yolo11 resoing was successful ,and generated result.jpg\n");
+	cv::imwrite("result.jpg", image);
+	fprintf(stderr, "yolo11 resoing was successful ,and generated result.jpg\n");
 	
 }

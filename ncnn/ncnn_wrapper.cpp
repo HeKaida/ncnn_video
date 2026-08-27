@@ -1,21 +1,22 @@
 #include "config.h"
-#include "yolo_wrapper.h"
-#include "yolo11_int8.h"
+#include "ncnn_wrapper.h"
+#include "ncnn.h"
 #include "convert_manager.h"
 
-
 #include <vector>
+
 
 static Yolo11Detector detector;
 static cv::Mat bgr;
 static std::vector<Object> objects;
 
-int YoloInit(int target_sz)
+
+int NCNNInit(const char *param, const char *bin, int target_sz)
 {
 	
 	
-	std::string param_path = "models/yolo11n-int8.param";
-	std::string bin_path   = "models/yolo11n-int8.bin";
+	std::string param_path = param;
+	std::string bin_path   = bin;
 	
 	if (detector.init(param_path, bin_path, target_sz) != 0)
     {
@@ -26,14 +27,13 @@ int YoloInit(int target_sz)
 	return 0;
 }
 
-int YoloDetect(PT_VideoConvert_Buf ptVideoConvert_Buf)
+
+int NCNNDetect(PT_VideoConvert_Buf ptVideoConvert_Buf)
 {
 	bgr = cv::Mat(ptVideoConvert_Buf->iHeight,
             ptVideoConvert_Buf->iWidth,
             CV_8UC3,
             ptVideoConvert_Buf->rgb_out);
-
-	cv::imwrite("debug_raw_1280.jpg", bgr); 
 
     objects.clear();
 
@@ -42,11 +42,19 @@ int YoloDetect(PT_VideoConvert_Buf ptVideoConvert_Buf)
         
         return -1;
     }
+
+	for (size_t i = 0; i < objects.size(); i++)
+    {
+		const Object& obj = objects[i];
     
+		fprintf(stderr, "%d = %.5f at %.2f %.2f %.2f x %.2f\n", obj.label, obj.prob,
+                obj.rect.x, obj.rect.y, obj.rect.width, obj.rect.height);
+    }
     return 0;
 }
 
-void YoloDrawObjects(void)
+
+void NCNNDrawObjects(void)
 {
 	detector.draw_objects(bgr, objects);
 }

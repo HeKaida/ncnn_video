@@ -201,53 +201,101 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-ncnn/yolo11_int8.o: ncnn/yolo11_int8.cpp.o
-.PHONY : ncnn/yolo11_int8.o
+ncnn/ncnn.o: ncnn/ncnn.cpp.o
+.PHONY : ncnn/ncnn.o
 
 # target to build an object file
-ncnn/yolo11_int8.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o
-.PHONY : ncnn/yolo11_int8.cpp.o
+ncnn/ncnn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o
+.PHONY : ncnn/ncnn.cpp.o
 
-ncnn/yolo11_int8.i: ncnn/yolo11_int8.cpp.i
-.PHONY : ncnn/yolo11_int8.i
+ncnn/ncnn.i: ncnn/ncnn.cpp.i
+.PHONY : ncnn/ncnn.i
 
 # target to preprocess a source file
-ncnn/yolo11_int8.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.i
-.PHONY : ncnn/yolo11_int8.cpp.i
+ncnn/ncnn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.i
+.PHONY : ncnn/ncnn.cpp.i
 
-ncnn/yolo11_int8.s: ncnn/yolo11_int8.cpp.s
-.PHONY : ncnn/yolo11_int8.s
+ncnn/ncnn.s: ncnn/ncnn.cpp.s
+.PHONY : ncnn/ncnn.s
 
 # target to generate assembly for a file
-ncnn/yolo11_int8.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.s
-.PHONY : ncnn/yolo11_int8.cpp.s
+ncnn/ncnn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.s
+.PHONY : ncnn/ncnn.cpp.s
 
-ncnn/yolo_wrapper.o: ncnn/yolo_wrapper.cpp.o
-.PHONY : ncnn/yolo_wrapper.o
+ncnn/ncnn_wrapper.o: ncnn/ncnn_wrapper.cpp.o
+.PHONY : ncnn/ncnn_wrapper.o
 
 # target to build an object file
-ncnn/yolo_wrapper.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o
-.PHONY : ncnn/yolo_wrapper.cpp.o
+ncnn/ncnn_wrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o
+.PHONY : ncnn/ncnn_wrapper.cpp.o
 
-ncnn/yolo_wrapper.i: ncnn/yolo_wrapper.cpp.i
-.PHONY : ncnn/yolo_wrapper.i
+ncnn/ncnn_wrapper.i: ncnn/ncnn_wrapper.cpp.i
+.PHONY : ncnn/ncnn_wrapper.i
 
 # target to preprocess a source file
-ncnn/yolo_wrapper.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.i
-.PHONY : ncnn/yolo_wrapper.cpp.i
+ncnn/ncnn_wrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.i
+.PHONY : ncnn/ncnn_wrapper.cpp.i
 
-ncnn/yolo_wrapper.s: ncnn/yolo_wrapper.cpp.s
-.PHONY : ncnn/yolo_wrapper.s
+ncnn/ncnn_wrapper.s: ncnn/ncnn_wrapper.cpp.s
+.PHONY : ncnn/ncnn_wrapper.s
 
 # target to generate assembly for a file
-ncnn/yolo_wrapper.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.s
-.PHONY : ncnn/yolo_wrapper.cpp.s
+ncnn/ncnn_wrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.s
+.PHONY : ncnn/ncnn_wrapper.cpp.s
+
+ncnn/yolo11.o: ncnn/yolo11.c.o
+.PHONY : ncnn/yolo11.o
+
+# target to build an object file
+ncnn/yolo11.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o
+.PHONY : ncnn/yolo11.c.o
+
+ncnn/yolo11.i: ncnn/yolo11.c.i
+.PHONY : ncnn/yolo11.i
+
+# target to preprocess a source file
+ncnn/yolo11.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.i
+.PHONY : ncnn/yolo11.c.i
+
+ncnn/yolo11.s: ncnn/yolo11.c.s
+.PHONY : ncnn/yolo11.s
+
+# target to generate assembly for a file
+ncnn/yolo11.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.s
+.PHONY : ncnn/yolo11.c.s
+
+video/camera.o: video/camera.c.o
+.PHONY : video/camera.o
+
+# target to build an object file
+video/camera.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/video/camera.c.o
+.PHONY : video/camera.c.o
+
+video/camera.i: video/camera.c.i
+.PHONY : video/camera.i
+
+# target to preprocess a source file
+video/camera.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/video/camera.c.i
+.PHONY : video/camera.c.i
+
+video/camera.s: video/camera.c.s
+.PHONY : video/camera.s
+
+# target to generate assembly for a file
+video/camera.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/video/camera.c.s
+.PHONY : video/camera.c.s
 
 video/v4l2.o: video/v4l2.c.o
 .PHONY : video/v4l2.o
@@ -315,12 +363,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... ncnn/yolo11_int8.o"
-	@echo "... ncnn/yolo11_int8.i"
-	@echo "... ncnn/yolo11_int8.s"
-	@echo "... ncnn/yolo_wrapper.o"
-	@echo "... ncnn/yolo_wrapper.i"
-	@echo "... ncnn/yolo_wrapper.s"
+	@echo "... ncnn/ncnn.o"
+	@echo "... ncnn/ncnn.i"
+	@echo "... ncnn/ncnn.s"
+	@echo "... ncnn/ncnn_wrapper.o"
+	@echo "... ncnn/ncnn_wrapper.i"
+	@echo "... ncnn/ncnn_wrapper.s"
+	@echo "... ncnn/yolo11.o"
+	@echo "... ncnn/yolo11.i"
+	@echo "... ncnn/yolo11.s"
+	@echo "... video/camera.o"
+	@echo "... video/camera.i"
+	@echo "... video/camera.s"
 	@echo "... video/v4l2.o"
 	@echo "... video/v4l2.i"
 	@echo "... video/v4l2.s"

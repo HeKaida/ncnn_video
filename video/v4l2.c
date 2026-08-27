@@ -10,12 +10,15 @@
 #include <sys/mman.h>
 #include <poll.h>
 #include <unistd.h>
-#include <pthread.h>
 
 #include <linux/types.h>
 #include <linux/videodev2.h>
 
 #include "video_manager.h"
+
+
+T_VideoBuf g_tVideoLastBuf;
+
 
 
 /*
@@ -120,7 +123,7 @@ static int V4L2InitDevice(char *strDevName, PT_VideoDevice ptVideoDevice)
 			frmsize_index++;
 		}
 
-		if((ptVideoDevice->iPixelFormat & v4l2_fmt_desc.pixelformat) && iError == 0)
+		if(ptVideoDevice->iPixelFormat & v4l2_fmt_desc.pixelformat)
 		{
 			DBG_PRINTF("---support pixelformat: %d ---", ptVideoDevice->iPixelFormat);
 		}
@@ -325,21 +328,40 @@ static int V4L2ExitDevice(PT_VideoDevice ptVideoDevice)
 }
 
 
+int V4L2Qbuf(int fd, int last_index)
+{
+	int iRet;
+
+	struct v4l2_buffer v4l2_relbuf;
+
+	memset(&v4l2_relbuf, 0, sizeof(struct v4l2_buffer));
+	v4l2_relbuf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    v4l2_relbuf.memory = V4L2_MEMORY_MMAP;
+    v4l2_relbuf.index = last_index;
+    iRet = ioctl(fd, VIDIOC_QBUF, &v4l2_relbuf);
+	if(iRet < 0)
+	{
+		DBG_SPRINTF(stderr, "Unable to insert queue buffer\n");
+		return -1;
+	}	
+
+	return 0;
+}
+
 /*
 	v4l2 get camera device frame from completed queue function
 */
 static int V4L2GetFrame(PT_VideoDevice ptVideoDevice)
 {
 	int iRet;
-	int last_index = -1;
 	
 	struct v4l2_buffer v4l2_buf;
-	struct v4l2_buffer v4l2_relbuf;
 	struct pollfd fds[1];
 
-	T_VideoBuf tVideoLastBuf;
-	
-	memset(&tVideoLastBuf, 0, sizeof(T_VideoBuf));
+
+	memset(&g_tVideoLastBuf, 0, sizeof(T_VideoBuf));
+
+	ptVideoDevice->iBuf_last_index = -1;
 
 	fds[0].fd = ptVideoDevice->iFd;
 	fds[0].events = POLLIN;
@@ -361,35 +383,22 @@ static int V4L2GetFrame(PT_VideoDevice ptVideoDevice)
 			break;
 		}
 
-		if (last_index != -1)
+		if (ptVideoDevice->iBuf_last_index != -1)
 		{
-			memset(&v4l2_relbuf, 0, sizeof(struct v4l2_buffer));
-            v4l2_relbuf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-            v4l2_relbuf.memory = V4L2_MEMORY_MMAP;
-            v4l2_relbuf.index = last_index;
-            iRet = ioctl(ptVideoDevice->iFd, VIDIOC_QBUF, &v4l2_relbuf);
+			iRet = V4L2Qbuf(ptVideoDevice->iFd, ptVideoDevice->iBuf_last_index);
 			if(iRet < 0)
 			{
-				DBG_SPRINTF(stderr, "Unable to dequeue buffer\n");
+				DBG_SPRINTF(stderr, "V4L2Qbuf fail!\n");
 				return -1;
 			}	
 		}
 
-		last_index = v4l2_buf.index;
-		tVideoLastBuf.index = v4l2_buf.index;
-		tVideoLastBuf.bytesused = v4l2_buf.bytesused;
-		tVideoLastBuf.addr = ptVideoDevice->ptMmapBuf[v4l2_buf.index].addr;
+		ptVideoDevice->iBuf_last_index = v4l2_buf.index;
+		g_tVideoLastBuf.index = v4l2_buf.index;
+		g_tVideoLastBuf.bytesused = v4l2_buf.bytesused;
+		g_tVideoLastBuf.addr = ptVideoDevice->ptMmapBuf[v4l2_buf.index].addr;
 	}
 
-
-	if (last_index != -1)
-	{
-		ptVideoDevice->tVideoBuf.status = 1;
-		ptVideoDevice->tVideoBuf.index = tVideoLastBuf.index;
-		ptVideoDevice->tVideoBuf.bytesused = tVideoLastBuf.bytesused;
-		ptVideoDevice->tVideoBuf.addr = ptVideoDevice->ptMmapBuf[tVideoLastBuf.index].addr;
-	}
-	
 	return 0;
 }
 
@@ -415,102 +424,6 @@ static int V4L2ReleaseFrame(PT_VideoDevice ptVideoDevice)
 }
 
 
-static void *capture_thread(void *arg)
-{
-	PT_VideoDevice ptVideoDevice = (PT_VideoDevice)arg;
-
-	while(ptVideoDevice->status == 1)
-	{
-		int iRet;
-		int last_index = -1;
-		
-		struct v4l2_buffer v4l2_buf;
-		struct v4l2_buffer v4l2_relbuf;
-		struct pollfd fds[1];
-
-		T_VideoBuf tVideoLastBuf;
-		
-		memset(&tVideoLastBuf, 0, sizeof(T_VideoBuf));
-
-		fds[0].fd = ptVideoDevice->iFd;
-		fds[0].events = POLLIN;
-		iRet = poll(fds, 1, -1);
-		if(iRet < 0)
-		{
-			DBG_SPRINTF(stderr, "Upoll error!\n");
-			goto err_exit;
-		}
-
-		while(1)
-		{
-			memset(&v4l2_buf, 0, sizeof(struct v4l2_buffer));
-			v4l2_buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-			v4l2_buf.memory = V4L2_MEMORY_MMAP;
-			iRet = ioctl(ptVideoDevice->iFd, VIDIOC_DQBUF, &v4l2_buf);
-			if(iRet < 0)
-			{
-				break;
-			}
-
-			if (last_index != -1)
-			{
-				memset(&v4l2_relbuf, 0, sizeof(struct v4l2_buffer));
-	            v4l2_relbuf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-	            v4l2_relbuf.memory = V4L2_MEMORY_MMAP;
-	            v4l2_relbuf.index = last_index;
-	            iRet = ioctl(ptVideoDevice->iFd, VIDIOC_QBUF, &v4l2_relbuf);
-				if(iRet < 0)
-				{
-					DBG_SPRINTF(stderr, "Unable to dequeue buffer\n");
-					goto err_exit;
-				}	
-			}
-
-			last_index = v4l2_buf.index;
-			tVideoLastBuf.index = v4l2_buf.index;
-			tVideoLastBuf.bytesused = v4l2_buf.bytesused;
-			tVideoLastBuf.addr = ptVideoDevice->ptMmapBuf[v4l2_buf.index].addr;
-		}
-
-		pthread_mutex_lock(&ptVideoDevice->frame_lock);
-		if(ptVideoDevice->tVideoBuf.status == 1)
-		{
-			pthread_mutex_unlock(&ptVideoDevice->frame_lock);
-			memset(&v4l2_relbuf, 0, sizeof(struct v4l2_buffer));
-			v4l2_relbuf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-	        v4l2_relbuf.memory = V4L2_MEMORY_MMAP;
-			v4l2_relbuf.index = last_index;
-			iRet = ioctl(ptVideoDevice->iFd, VIDIOC_QBUF, &v4l2_relbuf);
-			if(iRet < 0)
-			{
-				DBG_SPRINTF(stderr, "Unable to dequeue buffer\n");
-				goto err_exit;
-			}
-			continue;
-		}
-		else
-		{
-			if (last_index != -1)
-			{
-				ptVideoDevice->tVideoBuf.status = 1;
-				ptVideoDevice->tVideoBuf.index = tVideoLastBuf.index;
-				ptVideoDevice->tVideoBuf.bytesused = tVideoLastBuf.bytesused;
-				ptVideoDevice->tVideoBuf.addr = ptVideoDevice->ptMmapBuf[tVideoLastBuf.index].addr;
-
-				pthread_mutex_unlock(&ptVideoDevice->frame_lock);
-
-				pthread_cond_signal(&ptVideoDevice->frame_cond);
-			}
-		}
-	}
-
-err_exit:
-
-	pthread_exit(&ptVideoDevice->thread);
-	
-	return NULL;
-}
-
 /*
 	v4l2 open camera device function
 */
@@ -519,9 +432,6 @@ static int V4L2StartDevice(PT_VideoDevice ptVideoDevice)
 	int iError;
 	int type =  V4L2_BUF_TYPE_VIDEO_CAPTURE;
 
-	pthread_mutex_init(&ptVideoDevice->frame_lock, NULL);
-	pthread_cond_init(&ptVideoDevice->frame_cond, NULL);
-
 	iError = ioctl(ptVideoDevice->iFd, VIDIOC_STREAMON, &type);
 	if(iError < 0)
 	{
@@ -529,8 +439,6 @@ static int V4L2StartDevice(PT_VideoDevice ptVideoDevice)
 		return -1;
 	}
 
-	pthread_create(&ptVideoDevice->thread, NULL, capture_thread, (void *)ptVideoDevice);
-	
 	return 0;
 }
 
@@ -543,8 +451,6 @@ static int V4L2StopDevice(PT_VideoDevice ptVideoDevice)
 	int iError;
 	int type =  V4L2_BUF_TYPE_VIDEO_CAPTURE;
 
-	pthread_join(ptVideoDevice->thread, NULL);
-	
 	iError = ioctl(ptVideoDevice->iFd, VIDIOC_STREAMOFF, &type);
 	if(iError < 0)
 	{
@@ -562,13 +468,13 @@ static int V4L2StopDevice(PT_VideoDevice ptVideoDevice)
 */
 static T_VideoOpr g_tV4L2VideoOpr = 
 {
-	.name         = "v4l2",
-	.InitDevice   = V4L2InitDevice,
-	.ExitDevice   = V4L2ExitDevice,
-	.GetFrame     = V4L2GetFrame,
-	.ReleaseFrame = V4L2ReleaseFrame,
-	.StartDevice  = V4L2StartDevice,
-	.StopDevice   = V4L2StopDevice,
+	.name         	 = "v4l2",
+	.InitDevice   	 = V4L2InitDevice,
+	.ExitDevice   	 = V4L2ExitDevice,
+	.GetFrame     	 = V4L2GetFrame,
+	.ReleaseFrame 	 = V4L2ReleaseFrame,
+	.StartDevice  	 = V4L2StartDevice,
+	.StopDevice   	 = V4L2StopDevice,
 };
 
 

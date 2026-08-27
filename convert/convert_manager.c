@@ -7,6 +7,7 @@
 
 static PT_VideoConvert_Opr g_ptConvertOprHead = NULL;
 
+
 int RegisterConvertOpr(PT_VideoConvert_Opr ptConvertOpr)
 {
 	PT_VideoConvert_Opr ptTmp;
@@ -29,6 +30,7 @@ int RegisterConvertOpr(PT_VideoConvert_Opr ptConvertOpr)
 
 	return 0;
 }
+
 
 void ShowConvertOpr(void)
 {
@@ -58,10 +60,12 @@ PT_VideoConvert_Opr GetConvertOpr(char *pcName)
 	return NULL;
 }
 
+
 void ConvertDevicetInit(PT_ConvertDevice ptConvertDevice)
 {
 	ptConvertDevice->ptOpr = GetConvertOpr("mjpg2bgr");
 }
+
 
 int VideoConvertInit(void)
 {

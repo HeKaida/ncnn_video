@@ -1,8 +1,8 @@
-#include "config.h"
+#include <stdio.h>
 #include <string.h>
-
 #include "video_manager.h"
 #include "v4l2.h"
+
 
 /*
 	definit global video operation link list head. 
@@ -71,6 +71,7 @@ PT_VideoOpr GetVideoOpr(const char *pcName)
 	return NULL;
 }
 
+
 int VidoeDeviceInit(char *strDevName, PT_VideoDevice ptVideoDevice)
 {
 	int iError;
@@ -90,6 +91,7 @@ int VidoeDeviceInit(char *strDevName, PT_VideoDevice ptVideoDevice)
 	return -1;
 }
 
+
 /*
 	init video device function.
 */
@@ -101,6 +103,3 @@ int VideoInit(void)
 
 	return iError;
 }
-
-
-

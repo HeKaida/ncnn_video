@@ -111,10 +111,24 @@ CMakeFiles/ncnn_video.dir/video/video_manager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ncnn_video.dir/video/video_manager.c.s"
 	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hkd/Desktop/ncnn_video/video/video_manager.c -o CMakeFiles/ncnn_video.dir/video/video_manager.c.s
 
+CMakeFiles/ncnn_video.dir/video/camera.c.o: CMakeFiles/ncnn_video.dir/flags.make
+CMakeFiles/ncnn_video.dir/video/camera.c.o: ../video/camera.c
+CMakeFiles/ncnn_video.dir/video/camera.c.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ncnn_video.dir/video/camera.c.o"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/video/camera.c.o -MF CMakeFiles/ncnn_video.dir/video/camera.c.o.d -o CMakeFiles/ncnn_video.dir/video/camera.c.o -c /home/hkd/Desktop/ncnn_video/video/camera.c
+
+CMakeFiles/ncnn_video.dir/video/camera.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ncnn_video.dir/video/camera.c.i"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hkd/Desktop/ncnn_video/video/camera.c > CMakeFiles/ncnn_video.dir/video/camera.c.i
+
+CMakeFiles/ncnn_video.dir/video/camera.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ncnn_video.dir/video/camera.c.s"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hkd/Desktop/ncnn_video/video/camera.c -o CMakeFiles/ncnn_video.dir/video/camera.c.s
+
 CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o: CMakeFiles/ncnn_video.dir/flags.make
 CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o: ../convert/mjpg_to_bgr.c
 CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o"
 	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o -MF CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o.d -o CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o -c /home/hkd/Desktop/ncnn_video/convert/mjpg_to_bgr.c
 
 CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.s: cmake_force
 CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o: CMakeFiles/ncnn_video.dir/flags.make
 CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o: ../convert/convert_manager.c
 CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o"
 	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o -MF CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o.d -o CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o -c /home/hkd/Desktop/ncnn_video/convert/convert_manager.c
 
 CMakeFiles/ncnn_video.dir/convert/convert_manager.c.i: cmake_force
@@ -139,43 +153,59 @@ CMakeFiles/ncnn_video.dir/convert/convert_manager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ncnn_video.dir/convert/convert_manager.c.s"
 	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hkd/Desktop/ncnn_video/convert/convert_manager.c -o CMakeFiles/ncnn_video.dir/convert/convert_manager.c.s
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o: CMakeFiles/ncnn_video.dir/flags.make
-CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o: ../ncnn/yolo11_int8.cpp
-CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o -MF CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o.d -o CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o -c /home/hkd/Desktop/ncnn_video/ncnn/yolo11_int8.cpp
+CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o: CMakeFiles/ncnn_video.dir/flags.make
+CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o: ../ncnn/ncnn.cpp
+CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o -MF CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o.d -o CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o -c /home/hkd/Desktop/ncnn_video/ncnn/ncnn.cpp
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.i"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hkd/Desktop/ncnn_video/ncnn/yolo11_int8.cpp > CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.i
+CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.i"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hkd/Desktop/ncnn_video/ncnn/ncnn.cpp > CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.i
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.s"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hkd/Desktop/ncnn_video/ncnn/yolo11_int8.cpp -o CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.s
+CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.s"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hkd/Desktop/ncnn_video/ncnn/ncnn.cpp -o CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.s
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o: CMakeFiles/ncnn_video.dir/flags.make
-CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o: ../ncnn/yolo_wrapper.cpp
-CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o -MF CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o.d -o CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o -c /home/hkd/Desktop/ncnn_video/ncnn/yolo_wrapper.cpp
+CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: CMakeFiles/ncnn_video.dir/flags.make
+CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: ../ncnn/ncnn_wrapper.cpp
+CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o -MF CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o.d -o CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o -c /home/hkd/Desktop/ncnn_video/ncnn/ncnn_wrapper.cpp
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.i"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hkd/Desktop/ncnn_video/ncnn/yolo_wrapper.cpp > CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.i
+CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.i"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hkd/Desktop/ncnn_video/ncnn/ncnn_wrapper.cpp > CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.i
 
-CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.s"
-	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hkd/Desktop/ncnn_video/ncnn/yolo_wrapper.cpp -o CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.s
+CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.s"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hkd/Desktop/ncnn_video/ncnn/ncnn_wrapper.cpp -o CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.s
+
+CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o: CMakeFiles/ncnn_video.dir/flags.make
+CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o: ../ncnn/yolo11.c
+CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o: CMakeFiles/ncnn_video.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o -MF CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o.d -o CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o -c /home/hkd/Desktop/ncnn_video/ncnn/yolo11.c
+
+CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.i"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hkd/Desktop/ncnn_video/ncnn/yolo11.c > CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.i
+
+CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.s"
+	/home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hkd/Desktop/ncnn_video/ncnn/yolo11.c -o CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.s
 
 # Object files for target ncnn_video
 ncnn_video_OBJECTS = \
 "CMakeFiles/ncnn_video.dir/main.cpp.o" \
 "CMakeFiles/ncnn_video.dir/video/v4l2.c.o" \
 "CMakeFiles/ncnn_video.dir/video/video_manager.c.o" \
+"CMakeFiles/ncnn_video.dir/video/camera.c.o" \
 "CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o" \
 "CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o" \
-"CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o" \
-"CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o"
+"CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o" \
+"CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o" \
+"CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o"
 
 # External object files for target ncnn_video
 ncnn_video_EXTERNAL_OBJECTS =
@@ -183,17 +213,19 @@ ncnn_video_EXTERNAL_OBJECTS =
 ncnn_video: CMakeFiles/ncnn_video.dir/main.cpp.o
 ncnn_video: CMakeFiles/ncnn_video.dir/video/v4l2.c.o
 ncnn_video: CMakeFiles/ncnn_video.dir/video/video_manager.c.o
+ncnn_video: CMakeFiles/ncnn_video.dir/video/camera.c.o
 ncnn_video: CMakeFiles/ncnn_video.dir/convert/mjpg_to_bgr.c.o
 ncnn_video: CMakeFiles/ncnn_video.dir/convert/convert_manager.c.o
-ncnn_video: CMakeFiles/ncnn_video.dir/ncnn/yolo11_int8.cpp.o
-ncnn_video: CMakeFiles/ncnn_video.dir/ncnn/yolo_wrapper.cpp.o
+ncnn_video: CMakeFiles/ncnn_video.dir/ncnn/ncnn.cpp.o
+ncnn_video: CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o
+ncnn_video: CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.o
 ncnn_video: CMakeFiles/ncnn_video.dir/build.make
 ncnn_video: ../libjpeg_arm_install/lib/libjpeg.a
 ncnn_video: /home/hkd/Downloads/ncnn/build-cpu/install/lib/libncnn.a
 ncnn_video: /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/lib64/libgomp.so
 ncnn_video: /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/lib64/libpthread.a
 ncnn_video: CMakeFiles/ncnn_video.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ncnn_video"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hkd/Desktop/ncnn_video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ncnn_video"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ncnn_video.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

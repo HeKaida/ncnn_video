@@ -1,8 +1,10 @@
-#ifndef _YOLO11_INT8_H
-#define _YOLO11_INT8_H
+#ifndef _NCNN_H
+#define _NCNN_H
+
 
 #include "simpleocv.h"
 #include "net.h"
+
 
 struct Object
 {
@@ -10,6 +12,7 @@ struct Object
     int label;
     float prob;
 };
+
 
 class Yolo11Detector
 {
@@ -30,5 +33,6 @@ private:
     float prob_threshold;
     float nms_threshold; 
 };
-#endif
 
+
+#endif

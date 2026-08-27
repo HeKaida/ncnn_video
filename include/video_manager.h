@@ -1,13 +1,12 @@
 #ifndef _VIDOE_MANAGER_H
 #define _VIDOE_MANAGER_H
 
-#include <stdio.h>
-#include <pthread.h>
 
 /*
 	set requst buffers count
 */
 #define NB_BUFFER 4
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -19,6 +18,7 @@ extern "C" {
 */
 struct VideoDevice;
 struct VideOpr;
+
 typedef struct VideoDevice T_VideoDevice, *PT_VideoDevice;
 typedef struct VideoOpr T_VideoOpr, *PT_VideoOpr;
 
@@ -73,13 +73,8 @@ struct VideoDevice
 	int iWitdth;
 	int iHeight;
 	int iVideoBufCnt;
-	int status;
-
-	pthread_t thread;
-
-	pthread_mutex_t frame_lock;
-    pthread_cond_t frame_cond;
-
+	int iBuf_last_index;
+	
 	T_VideoBuf tVideoBuf;
 	
 	PT_VideoOpr ptOpr;
@@ -104,17 +99,15 @@ struct VideoOpr
 {
 	char *name;
 	
-	int (*InitDevice)(char *strDevName, PT_VideoDevice ptVideoDevice);
-	int (*ExitDevice)(PT_VideoDevice ptVideoDevice);
-	int (*GetFrame)(PT_VideoDevice ptVideoDevice);
-	int (*ReleaseFrame)(PT_VideoDevice ptVideoDevice);
-	int (*StartDevice)(PT_VideoDevice ptVideoDevice);
-	int (*StopDevice)(PT_VideoDevice ptVideoDevice);
+	int 		(*InitDevice)(char *strDevName, PT_VideoDevice ptVideoDevice);
+	int 		(*ExitDevice)(PT_VideoDevice ptVideoDevice);
+	int 		(*GetFrame)(PT_VideoDevice ptVideoDevice);
+	int 		(*ReleaseFrame)(PT_VideoDevice ptVideoDevice);
+	int 		(*StartDevice)(PT_VideoDevice ptVideoDevice);
+	int 		(*StopDevice)(PT_VideoDevice ptVideoDevice);
 
 	struct VideoOpr *ptNext;
 };
-
-
 
 
 int RegisterVideoOpr(PT_VideoOpr ptVideoOpr);
@@ -122,6 +115,7 @@ void ShowVideoOpr(void);
 PT_VideoOpr GetVideoOpr(const char *pcName);
 int VideoInit(void);
 int VidoeDeviceInit(char *strDevName, PT_VideoDevice ptVideoDevice);
+
 
 #ifdef __cplusplus
 }

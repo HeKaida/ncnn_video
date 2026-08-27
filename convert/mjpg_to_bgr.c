@@ -6,7 +6,9 @@
 #include "convert_manager.h"
 #include "jpeglib.h"
 
+
 #define JPEG_MEM_SRC_SUPPORTED 1
+
 
 static int mjpeg_to_bgr(PT_VideoDevice ptVideoDeviceIn, PT_VideoConvert_Buf ptVideoConvert_Buf)
 {

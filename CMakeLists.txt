@@ -13,10 +13,12 @@ set(SOURCES
     main.cpp
     video/v4l2.c
     video/video_manager.c
+    video/camera.c
 	convert/mjpg_to_bgr.c
 	convert/convert_manager.c
-	ncnn/yolo11_int8.cpp
-	ncnn/yolo_wrapper.cpp 
+	ncnn/ncnn.cpp
+	ncnn/ncnn_wrapper.cpp 
+	ncnn/yolo11.c
 )
 
 # 3. 设置头文件路径（等价于原 CFLAGS += -I include）
