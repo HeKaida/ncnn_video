@@ -19,6 +19,8 @@ set(SOURCES
 	ncnn/ncnn.cpp
 	ncnn/ncnn_wrapper.cpp 
 	ncnn/yolo11.c
+	serial/serial.c
+	serial/seriallcd.c
 )
 
 # 3. 设置头文件路径（等价于原 CFLAGS += -I include）
@@ -46,4 +48,4 @@ target_link_libraries(ncnn_video
 )
 
 # 显式包含头文件路径（如果 find_package 没自动加上）
-target_include_directories(ncnn_video PRIVATE ${OpenCV_INCLUDE_DIRS} ${ncnn_INCLUDE_DIRS})
+# target_include_directories(ncnn_video PRIVATE ${OpenCV_INCLUDE_DIRS} ${ncnn_INCLUDE_DIRS})

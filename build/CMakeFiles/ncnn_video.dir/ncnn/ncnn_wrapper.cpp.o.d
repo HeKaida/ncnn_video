@@ -1,8 +1,7 @@
 CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Desktop/ncnn_video/ncnn/ncnn_wrapper.cpp \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/stdc-predef.h \
- /home/hkd/Desktop/ncnn_video/include/config.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/stdio.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/string.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/libc-header-start.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/features.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/features-time64.h \
@@ -13,26 +12,58 @@ CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/gnu/stubs.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/gnu/stubs-lp64.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/11.2.1/include/stddef.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/11.2.1/include/stdarg.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/locale_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__locale_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/strings.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/vector \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_algobase.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/c++config.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/os_defines.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/cpu_defines.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/functexcept.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/exception_defines.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/cpp_type_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/type_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/numeric_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_pair.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/move.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/type_traits \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator_base_types.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator_base_funcs.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/concept_check.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/debug/assertions.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/ptr_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/debug/debug.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/predefined_ops.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/allocator.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/c++allocator.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/new_allocator.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/new \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/exception.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/memoryfwd.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_construct.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_uninitialized.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/alloc_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/alloc_traits.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_vector.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/initializer_list \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_bvector.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/functional_hash.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/hash_bytes.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/range_access.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/vector.tcc \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/stdlib.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/cstdlib \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/stdlib.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/waitflags.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/waitstatus.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/floatn.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/floatn-common.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/sys/types.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/typesizes.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/time64.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__fpos_t.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__mbstate_t.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__fpos64_t.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__FILE.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/FILE.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/struct_FILE.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/cookie_io_functions_t.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio_lim.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/floatn.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/floatn-common.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio.h \
- /home/hkd/Desktop/ncnn_video/include/ncnn_wrapper.h \
- /home/hkd/Desktop/ncnn_video/include/convert_manager.h \
- /home/hkd/Desktop/ncnn_video/include/video_manager.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/aio.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/sys/types.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/clock_t.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/clockid_t.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/time_t.h \
@@ -54,6 +85,26 @@ CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/pthreadtypes-arch.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/struct_mutex.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/struct_rwlock.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/alloca.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdlib-bsearch.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdlib-float.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/std_abs.h \
+ /home/hkd/Desktop/ncnn_video/include/config.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/stdio.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/11.2.1/include/stdarg.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__fpos_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__mbstate_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__fpos64_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__FILE.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/FILE.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/struct_FILE.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/cookie_io_functions_t.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio_lim.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdio.h \
+ /home/hkd/Desktop/ncnn_video/include/ncnn_wrapper.h \
+ /home/hkd/Desktop/ncnn_video/include/convert_manager.h \
+ /home/hkd/Desktop/ncnn_video/include/video_manager.h \
+ /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/aio.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/sigevent_t.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__sigval_t.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/sigevent-consts.h \
@@ -95,70 +146,22 @@ CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/timex.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/struct_tm.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/struct_itimerspec.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/locale_t.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/__locale_t.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/setjmp.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/types/struct___jmp_buf_tag.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/pthread_stack_min-dynamic.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/algorithm \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/utility \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/c++config.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/os_defines.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/cpu_defines.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_relops.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_pair.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/move.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/type_traits \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/initializer_list \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_algobase.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/functexcept.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/exception_defines.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/cpp_type_traits.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/type_traits.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/numeric_traits.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator_base_types.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator_base_funcs.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/concept_check.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/debug/assertions.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_iterator.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/ptr_traits.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/debug/debug.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/predefined_ops.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_algo.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/cstdlib \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/stdlib.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/waitflags.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/waitstatus.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/alloca.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdlib-bsearch.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/stdlib-float.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/std_abs.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/algorithmfwd.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_heap.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_tempbuf.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_construct.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/new \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/exception.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/uniform_int_dist.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/list \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/allocator.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/aarch64-none-linux-gnu/bits/c++allocator.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/new_allocator.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/memoryfwd.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/range_access.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_list.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/alloc_traits.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/alloc_traits.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/allocated_ptr.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/ext/aligned_buffer.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/list.tcc \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/vector \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_uninitialized.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_vector.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_bvector.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/functional_hash.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/hash_bytes.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/vector.tcc \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/stack \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/deque \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/bits/stl_deque.h \
@@ -232,10 +235,7 @@ CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/posix2_lim.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/xopen_lim.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/bits/uio_lim.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/string.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include/strings.h \
  /home/hkd/Downloads/ncnn/build-cpu/install/include/ncnn/allocator.h \
- /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/11.2.1/stdlib.h \
  /home/hkd/Downloads/ncnn/build-cpu/install/include/ncnn/mat.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/11.2.1/include/arm_neon.h \
  /home/hkd/Downloads/orangepi-build-next/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/11.2.1/include/arm_fp16.h \
@@ -246,4 +246,6 @@ CMakeFiles/ncnn_video.dir/ncnn/ncnn_wrapper.cpp.o: \
  /home/hkd/Downloads/ncnn/build-cpu/install/include/ncnn/layer.h \
  /home/hkd/Downloads/ncnn/build-cpu/install/include/ncnn/modelbin.h \
  /home/hkd/Downloads/ncnn/build-cpu/install/include/ncnn/paramdict.h \
- /home/hkd/Desktop/ncnn_video/include/convert_manager.h
+ /home/hkd/Desktop/ncnn_video/include/convert_manager.h \
+ /home/hkd/Desktop/ncnn_video/include/main.h \
+ /home/hkd/Desktop/ncnn_video/include/ncnn_wrapper.h

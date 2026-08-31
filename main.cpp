@@ -4,6 +4,7 @@
 #include "camera.h"
 #include "yolo11.h"
 #include "main.h"
+#include "seriallcd.h"
 
 
 T_Manager tManager;
@@ -13,13 +14,13 @@ int main(int argc, char **argv)
 {
 	int iError;
 	
-	if(argc != 2)
+	if(argc != 3)
   	{
 		fprintf(stderr, "Usage: ./* (/dev/video*)\n");
 		return -1;
   	}
 
-	tManager.g_stop = 0;
+	tManager.g_stop = 1;
 	
 	iError = Camera_Init(argv[1], &tManager);
 	if(iError != 0)
@@ -44,6 +45,12 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
+	iError = SerialLCD_Init(argv[2], 115200);
+	if(iError != 0)
+	{
+		fprintf(stderr, "SerialLCD_Init() fail!\n");
+		return -1;
+	}
 
 	
  	iError = Camera_Start(&tManager);
@@ -67,6 +74,13 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
+	iError = SerialLCD_Thread_Start(&tManager);
+	if(iError != 0)
+	{
+		fprintf(stderr, "SerialLCD_Thread_Start() fail!\n");
+		return -1;
+	}
+
 
 	iError = Camera_Thread_Join(&tManager);
 	if(iError != 0)
@@ -82,6 +96,13 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
+	iError = SerialLCD_Thread_Join();
+	if(iError != 0)
+	{
+		fprintf(stderr, "SerialLCD_Thread_Join() fail!\n");
+		return -1;
+	}
+	
 	
 	iError = Camera_Stop(&tManager);
 	if(iError != 0)

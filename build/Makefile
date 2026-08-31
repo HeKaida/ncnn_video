@@ -273,6 +273,54 @@ ncnn/yolo11.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/ncnn/yolo11.c.s
 .PHONY : ncnn/yolo11.c.s
 
+serial/serial.o: serial/serial.c.o
+.PHONY : serial/serial.o
+
+# target to build an object file
+serial/serial.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/serial.c.o
+.PHONY : serial/serial.c.o
+
+serial/serial.i: serial/serial.c.i
+.PHONY : serial/serial.i
+
+# target to preprocess a source file
+serial/serial.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/serial.c.i
+.PHONY : serial/serial.c.i
+
+serial/serial.s: serial/serial.c.s
+.PHONY : serial/serial.s
+
+# target to generate assembly for a file
+serial/serial.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/serial.c.s
+.PHONY : serial/serial.c.s
+
+serial/seriallcd.o: serial/seriallcd.c.o
+.PHONY : serial/seriallcd.o
+
+# target to build an object file
+serial/seriallcd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/seriallcd.c.o
+.PHONY : serial/seriallcd.c.o
+
+serial/seriallcd.i: serial/seriallcd.c.i
+.PHONY : serial/seriallcd.i
+
+# target to preprocess a source file
+serial/seriallcd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/seriallcd.c.i
+.PHONY : serial/seriallcd.c.i
+
+serial/seriallcd.s: serial/seriallcd.c.s
+.PHONY : serial/seriallcd.s
+
+# target to generate assembly for a file
+serial/seriallcd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ncnn_video.dir/build.make CMakeFiles/ncnn_video.dir/serial/seriallcd.c.s
+.PHONY : serial/seriallcd.c.s
+
 video/camera.o: video/camera.c.o
 .PHONY : video/camera.o
 
@@ -372,6 +420,12 @@ help:
 	@echo "... ncnn/yolo11.o"
 	@echo "... ncnn/yolo11.i"
 	@echo "... ncnn/yolo11.s"
+	@echo "... serial/serial.o"
+	@echo "... serial/serial.i"
+	@echo "... serial/serial.s"
+	@echo "... serial/seriallcd.o"
+	@echo "... serial/seriallcd.i"
+	@echo "... serial/seriallcd.s"
 	@echo "... video/camera.o"
 	@echo "... video/camera.i"
 	@echo "... video/camera.s"
